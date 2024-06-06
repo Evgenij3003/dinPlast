@@ -2,16 +2,15 @@
 /* Делегирование события "клик" на документе */
 document.addEventListener("click", function(e) {
     const targetElement = e.target;
-    console.log(targetElement);
-
+    
     // Закрытие мобильного меню:
     if (document.querySelector(".phone-header__body.open") 
-        && !targetElement.closest(".phone-header") && !targetElement.closest(".phone-header__body")) {
+        && !targetElement.classList.contains("phone-header") && !targetElement.closest(".phone-header__body")) {
             document.querySelector(".phone-header__body").classList.remove("open");
     }
 
     // Открытие/закрытие всплывашки телефона:
-    if (targetElement.classList.contains("phone-header__link") && window.innerWidth < 479.98) {
+    if (targetElement.classList.contains("phone-header") && window.innerWidth < 479.98) {
         let headerPhoneMenu = document.querySelector(".phone-header__body");
         if (!headerPhoneMenu.classList.contains("open")) {
             headerPhoneMenu.classList.add("open");
@@ -19,7 +18,7 @@ document.addEventListener("click", function(e) {
             headerPhoneMenu.classList.remove("open");
         }
     }
-});	
+});		
 
 
 
