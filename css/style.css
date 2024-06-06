@@ -559,7 +559,7 @@ body::-webkit-scrollbar-thumb {
     }
 
     .phone-header__link {
-        font-size: 1rem;
+        pointer-events: none;
     }
 
     .phone-header span {
