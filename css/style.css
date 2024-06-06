@@ -553,6 +553,10 @@ body::-webkit-scrollbar-thumb {
         display: none;
     }
 
+    .phone-header {
+        cursor: pointer;
+    }
+
     .phone-header img,
     .phone-header__body {
         display: block;
